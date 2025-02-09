@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Cadastrar Cliente</h2>
+    <form method="post">
+        {% csrf_token %}
+        <h3>Pessoa Física</h3>
+        {{ pessoa_fisica_form.as_p }}
+        <h3>Pessoa Jurídica</h3>
+        {{ pessoa_juridica_form.as_p }}
+        <h3>Dados do Cliente</h3>
+        {{ cliente_form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}
